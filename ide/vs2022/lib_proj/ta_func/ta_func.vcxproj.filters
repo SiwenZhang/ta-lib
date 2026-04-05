@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="src">
@@ -498,6 +498,9 @@
       <Filter>src\ta_func</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\src\ta_func\ta_IMI.c">
+      <Filter>src\ta_func</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\ta_func\ta_VWAP.c">
       <Filter>src\ta_func</Filter>
     </ClCompile>
   </ItemGroup>

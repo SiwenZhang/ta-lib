@@ -10,7 +10,8 @@ static void printRustLookbackFunctionSignature(FILE* out,
 {
     char funcNameBuffer[1024]; /* Not safe, but 1024 is realistic, */
     const TA_OptInputParameterInfo* optInputParamInfo;
-    int i, indent;
+    unsigned int i;
+    int indent;
     toLowerSnakeCase(funcInfo->name, funcNameBuffer);
 
     // print lookback function header
@@ -67,7 +68,8 @@ static void printRustDoublePrecisionFunctionSignature(FILE* out,
     const TA_OutputParameterInfo* outputParamInfo;
     const TA_InputParameterInfo* inputParamInfo;
     toLowerSnakeCase(funcInfo->name, funcNameBuffer);
-    int indent, i;
+    int indent;
+    unsigned int i;
 
     // Print function header with idiomatic Rust signature
     sprintf(gTempBuf, "%spub fn %s(",
@@ -200,7 +202,8 @@ static void printRustSinglePrecisionFunctionSignature(FILE* out,
     const TA_OutputParameterInfo* outputParamInfo;
     const TA_InputParameterInfo* inputParamInfo;
     toLowerSnakeCase(funcInfo->name, funcNameBuffer);
-    int indent, i;
+    int indent;
+    unsigned int i;
 
     // Print function header with idiomatic Rust signature for single precision
     sprintf(gTempBuf, "%spub fn %s_s(",
@@ -355,7 +358,6 @@ void writeRustMod(void)
 {
     // Update the rust/src/ta_func/mod.rs file.
     struct WriteRustModLinesParams params;
-    char buffer[500];
     FileHandle* out;
 
     if (!gmcpp_installed)

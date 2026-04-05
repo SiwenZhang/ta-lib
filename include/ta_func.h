@@ -5140,8 +5140,38 @@ TA_LIB_API TA_RetCode TA_S_ULTOSC( int    startIdx,
                                               double        outReal[] );
 
 TA_LIB_API int TA_ULTOSC_Lookback( int           optInTimePeriod1, /* From 1 to 100000 */
-                                            int           optInTimePeriod2, /* From 1 to 100000 */
-                                            int           optInTimePeriod3 );  /* From 1 to 100000 */
+                                             int           optInTimePeriod2, /* From 1 to 100000 */
+                                             int           optInTimePeriod3 );  /* From 1 to 100000 */
+
+
+/*
+ * TA_VWAP - Volume Weighted Average Price
+ * 
+ * Input  = High, Low, Close, Volume
+ * Output = double
+ * 
+ */
+TA_LIB_API TA_RetCode TA_VWAP( int    startIdx,
+                                int    endIdx,
+                                           const double inHigh[],
+                                           const double inLow[],
+                                           const double inClose[],
+                                           const double inVolume[],
+                                           int          *outBegIdx,
+                                           int          *outNBElement,
+                                           double        outReal[] );
+
+TA_LIB_API TA_RetCode TA_S_VWAP( int    startIdx,
+                                  int    endIdx,
+                                             const float  inHigh[],
+                                             const float  inLow[],
+                                             const float  inClose[],
+                                             const float  inVolume[],
+                                             int          *outBegIdx,
+                                             int          *outNBElement,
+                                             double        outReal[] );
+
+TA_LIB_API int TA_VWAP_Lookback( void );
 
 
 /*

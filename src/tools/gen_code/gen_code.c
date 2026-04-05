@@ -117,6 +117,7 @@
 #if defined (WIN32)
    #include <windows.h>
    #include <direct.h> // _getcwd
+   #include <io.h>     // _access
 #endif
 
 #include "ta_common.h"
@@ -148,7 +149,7 @@ void run_command(const char *command, char *output, size_t output_size)
     fprintf(stderr, "Failed to run command: %s\n", command);
     exit(1);
   }
-  if (fgets(output, output_size, fp) == NULL) {
+  if (fgets(output, (int)output_size, fp) == NULL) {
     fprintf(stderr, "Failed to read command output: %s\n", command);
 #if defined(_WIN32) || defined(_WIN64)
     _pclose(fp);
@@ -216,7 +217,7 @@ static char *ta_fs_path(int count, ...) {
 
     p = path;
     for (j = 0; j < count; j++) {
-        int i;
+        size_t i;
         char *part;
 
         part = va_arg(argp, char *);

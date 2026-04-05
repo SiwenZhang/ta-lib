@@ -192,7 +192,6 @@ static ErrorNumber do_test( const TA_History *history,
    ErrorNumber errNb;
    TA_Integer outBegIdx;
    TA_Integer outNbElement;
-   TA_RangeTestParam testParam;
 
    /* Set to NAN all the elements of the gBuffers.  */
    clearAllBuffers();

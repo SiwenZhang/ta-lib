@@ -3402,6 +3402,28 @@
 /* Generated */    return TA_VAR_Lookback(params->optIn[0].data.optInInteger, /* optInTimePeriod*/
 /* Generated */                     params->optIn[1].data.optInReal /* optInNbDev*/ );
 /* Generated */ }
+/* Generated */ TA_RetCode TA_VWAP_FramePP( const TA_ParamHolderPriv *params,
+/* Generated */                           int            startIdx,
+/* Generated */                           int            endIdx,
+/* Generated */                           int           *outBegIdx,
+/* Generated */                           int           *outNBElement )
+/* Generated */ {
+/* Generated */    return TA_VWAP(
+/* Generated */            startIdx,
+/* Generated */            endIdx,
+/* Generated */            params->in[0].data.inPrice.high, /* inHigh */
+/* Generated */            params->in[0].data.inPrice.low, /* inLow */
+/* Generated */            params->in[0].data.inPrice.close, /* inClose */
+/* Generated */            params->in[0].data.inPrice.volume, /* inVolume */
+/* Generated */            outBegIdx, 
+/* Generated */            outNBElement, 
+/* Generated */            params->out[0].data.outReal /*  outReal */ );
+/* Generated */ }
+/* Generated */ unsigned int TA_VWAP_FramePPLB( const TA_ParamHolderPriv *params )
+/* Generated */ {
+/* Generated */    (void)params;
+/* Generated */    return TA_VWAP_Lookback( );
+/* Generated */ }
 /* Generated */ TA_RetCode TA_WCLPRICE_FramePP( const TA_ParamHolderPriv *params,
 /* Generated */                           int            startIdx,
 /* Generated */                           int            endIdx,
