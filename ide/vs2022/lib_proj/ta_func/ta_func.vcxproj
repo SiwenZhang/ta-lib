@@ -452,6 +452,8 @@
     <ClCompile Include="..\..\..\..\src\ta_func\ta_BOP.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_CCI.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL2CROWS.c" />
+    <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL2LY.c" />
+    <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL2LV.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL3BLACKCROWS.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL3INSIDE.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL3LINESTRIKE.c" />
@@ -591,6 +593,7 @@
     <ClCompile Include="..\..\..\..\src\ta_func\ta_ULTOSC.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_VAR.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_VWAP.c" />
+    <ClCompile Include="..\..\..\..\src\ta_func\ta_VWAPFUTU.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_WCLPRICE.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_WILLR.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_WMA.c" />

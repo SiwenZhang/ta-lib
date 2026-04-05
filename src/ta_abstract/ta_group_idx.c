@@ -68,6 +68,8 @@ extern const TA_FuncDef TA_DEF_BETA;
 extern const TA_FuncDef TA_DEF_BOP;
 extern const TA_FuncDef TA_DEF_CCI;
 extern const TA_FuncDef TA_DEF_CDL2CROWS;
+extern const TA_FuncDef TA_DEF_CDL2LY;
+extern const TA_FuncDef TA_DEF_CDL2LV;
 extern const TA_FuncDef TA_DEF_CDL3BLACKCROWS;
 extern const TA_FuncDef TA_DEF_CDL3INSIDE;
 extern const TA_FuncDef TA_DEF_CDL3LINESTRIKE;
@@ -207,6 +209,7 @@ extern const TA_FuncDef TA_DEF_TYPPRICE;
 extern const TA_FuncDef TA_DEF_ULTOSC;
 extern const TA_FuncDef TA_DEF_VAR;
 extern const TA_FuncDef TA_DEF_VWAP;
+extern const TA_FuncDef TA_DEF_VWAPFUTU;
 extern const TA_FuncDef TA_DEF_WCLPRICE;
 extern const TA_FuncDef TA_DEF_WILLR;
 extern const TA_FuncDef TA_DEF_WMA;
@@ -323,11 +326,14 @@ const TA_FuncDef *TA_PerGroupFunc_6[] = {
 &TA_DEF_ADOSC,
 &TA_DEF_OBV,
 &TA_DEF_VWAP,
+&TA_DEF_VWAPFUTU,
 NULL };
 #define SIZE_GROUP_6 ((sizeof(TA_PerGroupFunc_6)/sizeof(const TA_FuncDef *))-1)
 
 const TA_FuncDef *TA_PerGroupFunc_7[] = {
 &TA_DEF_CDL2CROWS,
+&TA_DEF_CDL2LY,
+&TA_DEF_CDL2LV,
 &TA_DEF_CDL3BLACKCROWS,
 &TA_DEF_CDL3INSIDE,
 &TA_DEF_CDL3LINESTRIKE,

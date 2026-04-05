@@ -74,6 +74,12 @@
     <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL2CROWS.c">
       <Filter>src\ta_func</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL2LY.c">
+      <Filter>src\ta_func</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL2LV.c">
+      <Filter>src\ta_func</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL3BLACKCROWS.c">
       <Filter>src\ta_func</Filter>
     </ClCompile>
@@ -501,6 +507,9 @@
       <Filter>src\ta_func</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\src\ta_func\ta_VWAP.c">
+      <Filter>src\ta_func</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\ta_func\ta_VWAPFUTU.c">
       <Filter>src\ta_func</Filter>
     </ClCompile>
   </ItemGroup>

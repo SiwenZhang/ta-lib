@@ -732,6 +732,66 @@ TA_LIB_API int TA_CDL2CROWS_Lookback( void );
 
 
 /*
+ * TA_CDL2LY - Two Long White Candles (Yang)
+ * 
+ * Input  = Open, High, Low, Close
+ * Output = int
+ * 
+ */
+TA_LIB_API TA_RetCode TA_CDL2LY( int    startIdx,
+                                 int    endIdx,
+                                            const double inOpen[],
+                                            const double inHigh[],
+                                            const double inLow[],
+                                            const double inClose[],
+                                            int          *outBegIdx,
+                                            int          *outNBElement,
+                                            int           outInteger[] );
+
+TA_LIB_API TA_RetCode TA_S_CDL2LY( int    startIdx,
+                                   int    endIdx,
+                                              const float  inOpen[],
+                                              const float  inHigh[],
+                                              const float  inLow[],
+                                              const float  inClose[],
+                                              int          *outBegIdx,
+                                              int          *outNBElement,
+                                              int           outInteger[] );
+
+TA_LIB_API int TA_CDL2LY_Lookback( void );
+
+
+/*
+ * TA_CDL2LV - Two Long Black Candles (Yin)
+ * 
+ * Input  = Open, High, Low, Close
+ * Output = int
+ * 
+ */
+TA_LIB_API TA_RetCode TA_CDL2LV( int    startIdx,
+                                 int    endIdx,
+                                            const double inOpen[],
+                                            const double inHigh[],
+                                            const double inLow[],
+                                            const double inClose[],
+                                            int          *outBegIdx,
+                                            int          *outNBElement,
+                                            int           outInteger[] );
+
+TA_LIB_API TA_RetCode TA_S_CDL2LV( int    startIdx,
+                                   int    endIdx,
+                                              const float  inOpen[],
+                                              const float  inHigh[],
+                                              const float  inLow[],
+                                              const float  inClose[],
+                                              int          *outBegIdx,
+                                              int          *outNBElement,
+                                              int           outInteger[] );
+
+TA_LIB_API int TA_CDL2LV_Lookback( void );
+
+
+/*
  * TA_CDL3BLACKCROWS - Three Black Crows
  * 
  * Input  = Open, High, Low, Close
@@ -5172,6 +5232,38 @@ TA_LIB_API TA_RetCode TA_S_VWAP( int    startIdx,
                                              double        outReal[] );
 
 TA_LIB_API int TA_VWAP_Lookback( void );
+
+
+/*
+ * TA_VWAPFUTU - Volume Weighted Average Price (Futu)
+ * 
+ * Input  = High, Low, Close, Volume, double
+ * Output = double
+ * 
+ */
+TA_LIB_API TA_RetCode TA_VWAPFUTU( int    startIdx,
+                                    int    endIdx,
+                                               const double inHigh[],
+                                               const double inLow[],
+                                               const double inClose[],
+                                               const double inVolume[],
+                                               const double inReal[],
+                                               int          *outBegIdx,
+                                               int          *outNBElement,
+                                               double        outReal[] );
+
+TA_LIB_API TA_RetCode TA_S_VWAPFUTU( int    startIdx,
+                                      int    endIdx,
+                                                 const float  inHigh[],
+                                                 const float  inLow[],
+                                                 const float  inClose[],
+                                                 const float  inVolume[],
+                                                 const float  inReal[],
+                                                 int          *outBegIdx,
+                                                 int          *outNBElement,
+                                                 double        outReal[] );
+
+TA_LIB_API int TA_VWAPFUTU_Lookback( void );
 
 
 /*
