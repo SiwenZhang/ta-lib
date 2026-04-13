@@ -231,22 +231,22 @@
 /* Generated */ unsigned int TA_CDL2CROWS_FramePPLB( const TA_ParamHolderPriv *params )
 ;
 
-/* Generated */ TA_RetCode TA_CDL2LY_FramePP( const TA_ParamHolderPriv *params,
+/* Generated */ TA_RetCode TA_CDL2LYA_FramePP( const TA_ParamHolderPriv *params,
 /* Generated */                           int            startIdx,
 /* Generated */                           int            endIdx,
 /* Generated */                           int           *outBegIdx,
 /* Generated */                           int           *outNBElement )
 ;
-/* Generated */ unsigned int TA_CDL2LY_FramePPLB( const TA_ParamHolderPriv *params )
+/* Generated */ unsigned int TA_CDL2LYA_FramePPLB( const TA_ParamHolderPriv *params )
 ;
 
-/* Generated */ TA_RetCode TA_CDL2LV_FramePP( const TA_ParamHolderPriv *params,
+/* Generated */ TA_RetCode TA_CDL2LYI_FramePP( const TA_ParamHolderPriv *params,
 /* Generated */                           int            startIdx,
 /* Generated */                           int            endIdx,
 /* Generated */                           int           *outBegIdx,
 /* Generated */                           int           *outNBElement )
 ;
-/* Generated */ unsigned int TA_CDL2LV_FramePPLB( const TA_ParamHolderPriv *params )
+/* Generated */ unsigned int TA_CDL2LYI_FramePPLB( const TA_ParamHolderPriv *params )
 ;
 
 /* Generated */ TA_RetCode TA_CDL3BLACKCROWS_FramePP( const TA_ParamHolderPriv *params,
@@ -888,6 +888,24 @@
 /* Generated */ unsigned int TA_FLOOR_FramePPLB( const TA_ParamHolderPriv *params )
 ;
 
+/* Generated */ TA_RetCode TA_FLYA_FramePP( const TA_ParamHolderPriv *params,
+/* Generated */                           int            startIdx,
+/* Generated */                           int            endIdx,
+/* Generated */                           int           *outBegIdx,
+/* Generated */                           int           *outNBElement )
+;
+/* Generated */ unsigned int TA_FLYA_FramePPLB( const TA_ParamHolderPriv *params )
+;
+
+/* Generated */ TA_RetCode TA_FLYI_FramePP( const TA_ParamHolderPriv *params,
+/* Generated */                           int            startIdx,
+/* Generated */                           int            endIdx,
+/* Generated */                           int           *outBegIdx,
+/* Generated */                           int           *outNBElement )
+;
+/* Generated */ unsigned int TA_FLYI_FramePPLB( const TA_ParamHolderPriv *params )
+;
+
 /* Generated */ TA_RetCode TA_HT_DCPERIOD_FramePP( const TA_ParamHolderPriv *params,
 /* Generated */                           int            startIdx,
 /* Generated */                           int            endIdx,
@@ -1012,6 +1030,15 @@
 /* Generated */                           int           *outNBElement )
 ;
 /* Generated */ unsigned int TA_LOG10_FramePPLB( const TA_ParamHolderPriv *params )
+;
+
+/* Generated */ TA_RetCode TA_CDLLONG_FramePP( const TA_ParamHolderPriv *params,
+/* Generated */                           int            startIdx,
+/* Generated */                           int            endIdx,
+/* Generated */                           int           *outBegIdx,
+/* Generated */                           int           *outNBElement )
+;
+/* Generated */ unsigned int TA_CDLLONG_FramePPLB( const TA_ParamHolderPriv *params )
 ;
 
 /* Generated */ TA_RetCode TA_MA_FramePP( const TA_ParamHolderPriv *params,

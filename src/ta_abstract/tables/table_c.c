@@ -101,59 +101,61 @@ DEF_FUNCTION( CDL2CROWS,                      /* name */
 
 /* CDL2CROWS END */
 
-/* CDL2LY BEGIN */
-static const TA_InputParameterInfo    *TA_CDL2LY_Inputs[]    =
+/* CDL2LYA BEGIN */
+extern const TA_OptInputParameterInfo TA_DEF_UI_Ratio;
+
+static const TA_InputParameterInfo    *TA_CDL2LYA_Inputs[]    =
 {
   &TA_DEF_UI_Input_Price_OHLC,
   NULL
 };
 
-static const TA_OutputParameterInfo   *TA_CDL2LY_Outputs[]   =
+static const TA_OutputParameterInfo   *TA_CDL2LYA_Outputs[]   =
 {
   &TA_DEF_UI_Output_Integer,
   NULL
 };
 
-static const TA_OptInputParameterInfo *TA_CDL2LY_OptInputs[] =
-{
+static const TA_OptInputParameterInfo *TA_CDL2LYA_OptInputs[] =
+{ &TA_DEF_UI_Ratio,
   NULL
 };
 
-DEF_FUNCTION( CDL2LY,                        /* name */
+DEF_FUNCTION( CDL2LYA,                        /* name */
               TA_GroupId_PatternRecognition,  /* groupId */
               "Two Long White Candles (Yang)", /* hint */
-              "Cdl2ly",                      /* CamelCase name */
+              "Cdl2lya",                      /* CamelCase name */
               TA_FUNC_FLG_CANDLESTICK         /* flags */
              );
 
-/* CDL2LY END */
+/* CDL2LYA END */
 
-/* CDL2LV BEGIN */
-static const TA_InputParameterInfo    *TA_CDL2LV_Inputs[]    =
+/* CDL2LYI BEGIN */
+static const TA_InputParameterInfo    *TA_CDL2LYI_Inputs[]    =
 {
   &TA_DEF_UI_Input_Price_OHLC,
   NULL
 };
 
-static const TA_OutputParameterInfo   *TA_CDL2LV_Outputs[]   =
+static const TA_OutputParameterInfo   *TA_CDL2LYI_Outputs[]   =
 {
   &TA_DEF_UI_Output_Integer,
   NULL
 };
 
-static const TA_OptInputParameterInfo *TA_CDL2LV_OptInputs[] =
-{
+static const TA_OptInputParameterInfo *TA_CDL2LYI_OptInputs[] =
+{ &TA_DEF_UI_Ratio,
   NULL
 };
 
-DEF_FUNCTION( CDL2LV,                        /* name */
+DEF_FUNCTION( CDL2LYI,                        /* name */
               TA_GroupId_PatternRecognition,  /* groupId */
               "Two Long Black Candles (Yin)", /* hint */
-              "Cdl2lv",                      /* CamelCase name */
+              "Cdl2lyi",                      /* CamelCase name */
               TA_FUNC_FLG_CANDLESTICK         /* flags */
              );
 
-/* CDL2LV END */
+/* CDL2LYI END */
 
 /* CDL3BLACKCROWS BEGIN */
 static const TA_InputParameterInfo    *TA_CDL3BLACKCROWS_Inputs[]    =
@@ -1858,8 +1860,8 @@ const TA_FuncDef *TA_DEF_TableC[] =
 {
    ADD_TO_TABLE(CCI),
    ADD_TO_TABLE(CDL2CROWS),
-   ADD_TO_TABLE(CDL2LY),
-   ADD_TO_TABLE(CDL2LV),
+   ADD_TO_TABLE(CDL2LYA),
+   ADD_TO_TABLE(CDL2LYI),
    ADD_TO_TABLE(CDL3BLACKCROWS),
    ADD_TO_TABLE(CDL3INSIDE),
    ADD_TO_TABLE(CDL3LINESTRIKE),

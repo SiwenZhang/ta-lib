@@ -732,63 +732,77 @@ TA_LIB_API int TA_CDL2CROWS_Lookback( void );
 
 
 /*
- * TA_CDL2LY - Two Long White Candles (Yang)
+ * TA_CDL2LYA - Two Long White Candles (Yang)
  * 
  * Input  = Open, High, Low, Close
  * Output = int
  * 
+ * Optional Parameters
+ * -------------------
+ * optInRatio:(From 0.0 to TA_REAL_MAX)
+ *    Ratio multiplier for average body comparison
+ * 
  */
-TA_LIB_API TA_RetCode TA_CDL2LY( int    startIdx,
+TA_LIB_API TA_RetCode TA_CDL2LYA( int    startIdx,
                                  int    endIdx,
                                             const double inOpen[],
                                             const double inHigh[],
                                             const double inLow[],
                                             const double inClose[],
+                                            double        optInRatio, /* From 0.0 to TA_REAL_MAX */
                                             int          *outBegIdx,
                                             int          *outNBElement,
                                             int           outInteger[] );
 
-TA_LIB_API TA_RetCode TA_S_CDL2LY( int    startIdx,
+TA_LIB_API TA_RetCode TA_S_CDL2LYA( int    startIdx,
                                    int    endIdx,
                                               const float  inOpen[],
                                               const float  inHigh[],
                                               const float  inLow[],
                                               const float  inClose[],
+                                              double        optInRatio, /* From 0.0 to TA_REAL_MAX */
                                               int          *outBegIdx,
                                               int          *outNBElement,
                                               int           outInteger[] );
 
-TA_LIB_API int TA_CDL2LY_Lookback( void );
+TA_LIB_API int TA_CDL2LYA_Lookback( double        optInRatio );  /* From 0.0 to TA_REAL_MAX */
 
 
 /*
- * TA_CDL2LV - Two Long Black Candles (Yin)
+ * TA_CDL2LYI - Two Long Black Candles (Yin)
  * 
  * Input  = Open, High, Low, Close
  * Output = int
  * 
+ * Optional Parameters
+ * -------------------
+ * optInRatio:(From 0.0 to TA_REAL_MAX)
+ *    Ratio multiplier for average body comparison
+ * 
  */
-TA_LIB_API TA_RetCode TA_CDL2LV( int    startIdx,
+TA_LIB_API TA_RetCode TA_CDL2LYI( int    startIdx,
                                  int    endIdx,
                                             const double inOpen[],
                                             const double inHigh[],
                                             const double inLow[],
                                             const double inClose[],
+                                            double        optInRatio, /* From 0.0 to TA_REAL_MAX */
                                             int          *outBegIdx,
                                             int          *outNBElement,
                                             int           outInteger[] );
 
-TA_LIB_API TA_RetCode TA_S_CDL2LV( int    startIdx,
+TA_LIB_API TA_RetCode TA_S_CDL2LYI( int    startIdx,
                                    int    endIdx,
                                               const float  inOpen[],
                                               const float  inHigh[],
                                               const float  inLow[],
                                               const float  inClose[],
+                                              double        optInRatio, /* From 0.0 to TA_REAL_MAX */
                                               int          *outBegIdx,
                                               int          *outNBElement,
                                               int           outInteger[] );
 
-TA_LIB_API int TA_CDL2LV_Lookback( void );
+TA_LIB_API int TA_CDL2LYI_Lookback( double        optInRatio );  /* From 0.0 to TA_REAL_MAX */
 
 
 /*
@@ -2958,6 +2972,96 @@ TA_LIB_API TA_RetCode TA_S_FLOOR( int    startIdx,
 
 TA_LIB_API int TA_FLOOR_Lookback( void );
 
+/*
+ * TA_FLYA - Full Day (Long White Candle with High Volume)
+ * 
+ * Input  = Open, High, Low, Close, Volume
+ * Output = int
+ * 
+ * Optional Parameters
+ * -------------------
+ * optInBodyRatio:(From 0.0 to TA_REAL_MAX)
+ *    Body ratio multiplier for average body comparison
+ * 
+ * optInVolumeRatio:(From 0.0 to TA_REAL_MAX)
+ *    Volume ratio multiplier for average volume comparison
+ * 
+ * 
+ */
+TA_LIB_API TA_RetCode TA_FLYA( int    startIdx,
+                                      int    endIdx,
+                                                 const double inOpen[],
+                                                 const double inHigh[],
+                                                 const double inLow[],
+                                                 const double inClose[],
+                                                 const double inVolume[],
+                                                 double        optInBodyRatio, /* From 0.0 to TA_REAL_MAX */
+                                                 double        optInVolumeRatio, /* From 0.0 to TA_REAL_MAX */
+                                                 int          *outBegIdx,
+                                                 int          *outNBElement,
+                                                 int           outInteger[] );
+
+TA_LIB_API TA_RetCode TA_S_FLYA( int    startIdx,
+                                        int    endIdx,
+                                                   const float  inOpen[],
+                                                   const float  inHigh[],
+                                                   const float  inLow[],
+                                                   const float  inClose[],
+                                                   const float  inVolume[],
+                                                   double        optInBodyRatio, /* From 0.0 to TA_REAL_MAX */
+                                                   double        optInVolumeRatio, /* From 0.0 to TA_REAL_MAX */
+                                                   int          *outBegIdx,
+                                                   int          *outNBElement,
+                                                   int           outInteger[] );
+
+TA_LIB_API int TA_FLYA_Lookback( double        optInBodyRatio, /* From 0.0 to TA_REAL_MAX */
+                                          double        optInVolumeRatio );  /* From 0.0 to TA_REAL_MAX */
+
+/*
+ * TA_FLYI - Full Yin (Long Black Candle with High Volume)
+ * 
+ * Input  = Open, High, Low, Close, Volume
+ * Output = int
+ * 
+ * Optional Parameters
+ * -------------------
+ * optInBodyRatio:(From 0.0 to TA_REAL_MAX)
+ *    Body ratio multiplier for average body comparison
+ * 
+ * optInVolumeRatio:(From 0.0 to TA_REAL_MAX)
+ *    Volume ratio multiplier for average volume comparison
+ * 
+ * 
+ */
+TA_LIB_API TA_RetCode TA_FLYI( int    startIdx,
+                                      int    endIdx,
+                                                 const double inOpen[],
+                                                 const double inHigh[],
+                                                 const double inLow[],
+                                                 const double inClose[],
+                                                 const double inVolume[],
+                                                 double        optInBodyRatio, /* From 0.0 to TA_REAL_MAX */
+                                                 double        optInVolumeRatio, /* From 0.0 to TA_REAL_MAX */
+                                                 int          *outBegIdx,
+                                                 int          *outNBElement,
+                                                 int           outInteger[] );
+
+TA_LIB_API TA_RetCode TA_S_FLYI( int    startIdx,
+                                        int    endIdx,
+                                                   const float  inOpen[],
+                                                   const float  inHigh[],
+                                                   const float  inLow[],
+                                                   const float  inClose[],
+                                                   const float  inVolume[],
+                                                   double        optInBodyRatio, /* From 0.0 to TA_REAL_MAX */
+                                                   double        optInVolumeRatio, /* From 0.0 to TA_REAL_MAX */
+                                                   int          *outBegIdx,
+                                                   int          *outNBElement,
+                                                   int           outInteger[] );
+
+TA_LIB_API int TA_FLYI_Lookback( double        optInBodyRatio, /* From 0.0 to TA_REAL_MAX */
+                                          double        optInVolumeRatio );  /* From 0.0 to TA_REAL_MAX */
+
 
 /*
  * TA_HT_DCPERIOD - Hilbert Transform - Dominant Cycle Period
@@ -3347,6 +3451,43 @@ TA_LIB_API TA_RetCode TA_S_LOG10( int    startIdx,
                                              double        outReal[] );
 
 TA_LIB_API int TA_LOG10_Lookback( void );
+
+/*
+ * TA_CDLLONG - Long Real Body
+ * 
+ * Input  = Open, High, Low, Close
+ * Output = int
+ * 
+ * Optional Parameters
+ * -------------------
+ * optInRatio:(From 0.0 to TA_REAL_MAX)
+ *    Ratio multiplier for average body comparison
+ * 
+ * 
+ */
+TA_LIB_API TA_RetCode TA_CDLLONG( int    startIdx,
+                                      int    endIdx,
+                                                 const double inOpen[],
+                                                 const double inHigh[],
+                                                 const double inLow[],
+                                                 const double inClose[],
+                                                 double        optInRatio, /* From 0.0 to TA_REAL_MAX */
+                                                 int          *outBegIdx,
+                                                 int          *outNBElement,
+                                                 int           outInteger[] );
+
+TA_LIB_API TA_RetCode TA_S_CDLLONG( int    startIdx,
+                                        int    endIdx,
+                                                   const float  inOpen[],
+                                                   const float  inHigh[],
+                                                   const float  inLow[],
+                                                   const float  inClose[],
+                                                   double        optInRatio, /* From 0.0 to TA_REAL_MAX */
+                                                   int          *outBegIdx,
+                                                   int          *outNBElement,
+                                                   int           outInteger[] );
+
+TA_LIB_API int TA_CDLLONG_Lookback( double        optInRatio );  /* From 0.0 to TA_REAL_MAX */
 
 
 /*

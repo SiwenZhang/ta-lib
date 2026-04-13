@@ -52,6 +52,110 @@
 DEF_MATH_UNARY_OPERATOR( FLOOR, "Vector Floor", "Floor" )
 /* Floor END */
 
+/* FLYA BEGIN */
+/* Body ratio is used for long body comparison (how many times longer than average of 10 previous candles) */
+const TA_RealRange TA_DEF_BodyRatioPositive =
+{
+   0.00,  /* min */
+   TA_REAL_MAX,  /* max */
+   2,    /* precision */
+   0.5,  /* suggested start */
+   2.0,  /* suggested end */
+   0.1   /* suggested increment */
+};
+
+const TA_OptInputParameterInfo TA_DEF_UI_BodyRatio =
+{
+   TA_OptInput_RealRange, /* type */
+   "optInBodyRatio",      /* paramName */
+   0,                     /* flags */
+
+   "Body Ratio",          /* displayName */
+   (const void *)&TA_DEF_BodyRatioPositive, /* dataSet */
+   1.0, /* defaultValue */
+   "Body ratio multiplier for average body comparison", /* hint */
+
+   NULL /* CamelCase name */
+};
+
+/* Volume ratio is used for high volume comparison (how many times more than average of 20 previous candles) */
+const TA_RealRange TA_DEF_VolumeRatioPositive =
+{
+   0.00,  /* min */
+   TA_REAL_MAX,  /* max */
+   2,    /* precision */
+   0.5,  /* suggested start */
+   3.0,  /* suggested end */
+   0.1   /* suggested increment */
+};
+
+const TA_OptInputParameterInfo TA_DEF_UI_VolumeRatio =
+{
+   TA_OptInput_RealRange, /* type */
+   "optInVolumeRatio",    /* paramName */
+   0,                     /* flags */
+
+   "Volume Ratio",        /* displayName */
+   (const void *)&TA_DEF_VolumeRatioPositive, /* dataSet */
+   1.0, /* defaultValue */
+   "Volume ratio multiplier for average volume comparison", /* hint */
+
+   NULL /* CamelCase name */
+};
+
+static const TA_InputParameterInfo    *TA_FLYA_Inputs[]    =
+{
+  &TA_DEF_UI_Input_Price_OHLCV,
+  NULL
+};
+
+static const TA_OutputParameterInfo   *TA_FLYA_Outputs[]   =
+{
+  &TA_DEF_UI_Output_Integer,
+  NULL
+};
+
+static const TA_OptInputParameterInfo *TA_FLYA_OptInputs[] =
+{ &TA_DEF_UI_BodyRatio,
+  &TA_DEF_UI_VolumeRatio,
+  NULL
+};
+
+DEF_FUNCTION( FLYA,                             /* name */
+              TA_GroupId_PatternRecognition,    /* groupId */
+              "Full Yang (Long White Candle with High Volume)", /* hint */
+              "Flya",                           /* CamelCase name */
+              0                                 /* flags */
+             );
+/* FLYA END */
+
+/* FLYI BEGIN */
+static const TA_InputParameterInfo    *TA_FLYI_Inputs[]    =
+{
+  &TA_DEF_UI_Input_Price_OHLCV,
+  NULL
+};
+
+static const TA_OutputParameterInfo   *TA_FLYI_Outputs[]   =
+{
+  &TA_DEF_UI_Output_Integer,
+  NULL
+};
+
+static const TA_OptInputParameterInfo *TA_FLYI_OptInputs[] =
+{ &TA_DEF_UI_BodyRatio,
+  &TA_DEF_UI_VolumeRatio,
+  NULL
+};
+
+DEF_FUNCTION( FLYI,                             /* name */
+              TA_GroupId_PatternRecognition,    /* groupId */
+              "Full Yin (Long Black Candle with High Volume)", /* hint */
+              "Flyi",                           /* CamelCase name */
+              0                                 /* flags */
+             );
+/* FLYI END */
+
 
 /****************************************************************************
  * Step 2 - Add your TA function to the table.
@@ -59,6 +163,8 @@ DEF_MATH_UNARY_OPERATOR( FLOOR, "Vector Floor", "Floor" )
  ****************************************************************************/
 const TA_FuncDef *TA_DEF_TableF[] =
 {
+   ADD_TO_TABLE(FLYA),
+   ADD_TO_TABLE(FLYI),
    ADD_TO_TABLE(FLOOR),
    NULL
 };

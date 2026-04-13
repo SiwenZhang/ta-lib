@@ -452,8 +452,8 @@
     <ClCompile Include="..\..\..\..\src\ta_func\ta_BOP.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_CCI.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL2CROWS.c" />
-    <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL2LY.c" />
-    <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL2LV.c" />
+    <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL2LYA.c" />
+    <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL2LYI.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL3BLACKCROWS.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL3INSIDE.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL3LINESTRIKE.c" />
@@ -524,6 +524,8 @@
     <ClCompile Include="..\..\..\..\src\ta_func\ta_DX.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_EMA.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_EXP.c" />
+    <ClCompile Include="..\..\..\..\src\ta_func\ta_FLYA.c" />
+    <ClCompile Include="..\..\..\..\src\ta_func\ta_FLYI.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_FLOOR.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_HT_DCPERIOD.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_HT_DCPHASE.c" />
@@ -539,6 +541,7 @@
     <ClCompile Include="..\..\..\..\src\ta_func\ta_LINEARREG_SLOPE.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_LN.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_LOG10.c" />
+    <ClCompile Include="..\..\..\..\src\ta_func\ta_CDLLONG.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_MA.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_MACD.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_MACDEXT.c" />

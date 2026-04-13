@@ -160,6 +160,58 @@ DEF_MATH_UNARY_OPERATOR( LN, "Vector Log Natural", "Ln" )
 DEF_MATH_UNARY_OPERATOR( LOG10, "Vector Log10", "Log10" )
 /* LOG10 END */
 
+/* LONG BEGIN */
+
+/* Ratio is used for long body comparison. */
+const TA_RealRange TA_DEF_RatioPositive =
+{
+   0.00,  /* min */
+   TA_REAL_MAX,  /* max */
+   2,    /* precision */
+   0.5,  /* suggested start */
+   2.0,  /* suggested end */
+   0.1   /* suggested increment */
+};
+
+const TA_OptInputParameterInfo TA_DEF_UI_Ratio =
+{
+   TA_OptInput_RealRange, /* type */
+   "optInRatio",          /* paramName */
+   0,                     /* flags */
+
+   "Ratio",               /* displayName */
+   (const void *)&TA_DEF_RatioPositive, /* dataSet */
+   1.0, /* defaultValue */
+   "Ratio multiplier for average body comparison", /* hint */
+
+   NULL /* CamelCase name */
+};
+
+static const TA_InputParameterInfo    *TA_CDLLONG_Inputs[]    =
+{
+  &TA_DEF_UI_Input_Price_OHLC,
+  NULL
+};
+
+static const TA_OutputParameterInfo   *TA_CDLLONG_Outputs[]   =
+{
+  &TA_DEF_UI_Output_Integer,
+  NULL
+};
+
+static const TA_OptInputParameterInfo *TA_CDLLONG_OptInputs[] =
+{ &TA_DEF_UI_Ratio,
+  NULL
+};
+
+DEF_FUNCTION( CDLLONG,                          /* name */
+              TA_GroupId_PatternRecognition, /* groupId */
+              "Long Real Body",              /* hint */
+              "Cdllong",                        /* CamelCase name */
+              0                              /* flags */
+             );
+/* LONG END */
+
 /****************************************************************************
  * Step 2 - Add your TA function to the table.
  *          Keep in alphabetical order. Must be NULL terminated.
@@ -172,6 +224,7 @@ const TA_FuncDef *TA_DEF_TableL[] =
    ADD_TO_TABLE(LINEARREG_SLOPE),
    ADD_TO_TABLE(LN),
    ADD_TO_TABLE(LOG10),
+   ADD_TO_TABLE(CDLLONG),
    NULL
 };
 

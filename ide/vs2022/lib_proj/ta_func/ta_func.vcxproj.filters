@@ -74,10 +74,10 @@
     <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL2CROWS.c">
       <Filter>src\ta_func</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL2LY.c">
+    <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL2LYA.c">
       <Filter>src\ta_func</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL2LV.c">
+    <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL2LYI.c">
       <Filter>src\ta_func</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL3BLACKCROWS.c">
@@ -290,6 +290,12 @@
     <ClCompile Include="..\..\..\..\src\ta_func\ta_EXP.c">
       <Filter>src\ta_func</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\src\ta_func\ta_FLYA.c">
+      <Filter>src\ta_func</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\ta_func\ta_FLYI.c">
+      <Filter>src\ta_func</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\..\..\src\ta_func\ta_FLOOR.c">
       <Filter>src\ta_func</Filter>
     </ClCompile>
@@ -330,6 +336,9 @@
       <Filter>src\ta_func</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\src\ta_func\ta_LOG10.c">
+      <Filter>src\ta_func</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\src\ta_func\ta_CDLLONG.c">
       <Filter>src\ta_func</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\src\ta_func\ta_MA.c">

@@ -68,8 +68,8 @@ extern const TA_FuncDef TA_DEF_BETA;
 extern const TA_FuncDef TA_DEF_BOP;
 extern const TA_FuncDef TA_DEF_CCI;
 extern const TA_FuncDef TA_DEF_CDL2CROWS;
-extern const TA_FuncDef TA_DEF_CDL2LY;
-extern const TA_FuncDef TA_DEF_CDL2LV;
+extern const TA_FuncDef TA_DEF_CDL2LYA;
+extern const TA_FuncDef TA_DEF_CDL2LYI;
 extern const TA_FuncDef TA_DEF_CDL3BLACKCROWS;
 extern const TA_FuncDef TA_DEF_CDL3INSIDE;
 extern const TA_FuncDef TA_DEF_CDL3LINESTRIKE;
@@ -140,6 +140,8 @@ extern const TA_FuncDef TA_DEF_DIV;
 extern const TA_FuncDef TA_DEF_DX;
 extern const TA_FuncDef TA_DEF_EMA;
 extern const TA_FuncDef TA_DEF_EXP;
+extern const TA_FuncDef TA_DEF_FLYA;
+extern const TA_FuncDef TA_DEF_FLYI;
 extern const TA_FuncDef TA_DEF_FLOOR;
 extern const TA_FuncDef TA_DEF_HT_DCPERIOD;
 extern const TA_FuncDef TA_DEF_HT_DCPHASE;
@@ -155,6 +157,7 @@ extern const TA_FuncDef TA_DEF_LINEARREG_INTERCEPT;
 extern const TA_FuncDef TA_DEF_LINEARREG_SLOPE;
 extern const TA_FuncDef TA_DEF_LN;
 extern const TA_FuncDef TA_DEF_LOG10;
+extern const TA_FuncDef TA_DEF_CDLLONG;
 extern const TA_FuncDef TA_DEF_MA;
 extern const TA_FuncDef TA_DEF_MACD;
 extern const TA_FuncDef TA_DEF_MACDEXT;
@@ -332,8 +335,8 @@ NULL };
 
 const TA_FuncDef *TA_PerGroupFunc_7[] = {
 &TA_DEF_CDL2CROWS,
-&TA_DEF_CDL2LY,
-&TA_DEF_CDL2LV,
+&TA_DEF_CDL2LYA,
+&TA_DEF_CDL2LYI,
 &TA_DEF_CDL3BLACKCROWS,
 &TA_DEF_CDL3INSIDE,
 &TA_DEF_CDL3LINESTRIKE,
@@ -354,6 +357,8 @@ const TA_FuncDef *TA_PerGroupFunc_7[] = {
 &TA_DEF_CDLENGULFING,
 &TA_DEF_CDLEVENINGDOJISTAR,
 &TA_DEF_CDLEVENINGSTAR,
+&TA_DEF_FLYA,
+&TA_DEF_FLYI,
 &TA_DEF_CDLGAPSIDESIDEWHITE,
 &TA_DEF_CDLGRAVESTONEDOJI,
 &TA_DEF_CDLHAMMER,
@@ -372,6 +377,7 @@ const TA_FuncDef *TA_PerGroupFunc_7[] = {
 &TA_DEF_CDLLADDERBOTTOM,
 &TA_DEF_CDLLONGLEGGEDDOJI,
 &TA_DEF_CDLLONGLINE,
+&TA_DEF_CDLLONG,
 &TA_DEF_CDLMARUBOZU,
 &TA_DEF_CDLMATCHINGLOW,
 &TA_DEF_CDLMATHOLD,
