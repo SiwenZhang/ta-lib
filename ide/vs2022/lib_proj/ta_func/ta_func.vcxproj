@@ -450,6 +450,7 @@
     <ClCompile Include="..\..\..\..\src\ta_func\ta_BBANDS.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_BETA.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_BOP.c" />
+    <ClCompile Include="..\..\..\..\src\ta_func\ta_BRVR.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_CCI.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL2CROWS.c" />
     <ClCompile Include="..\..\..\..\src\ta_func\ta_CDL2LYA.c" />

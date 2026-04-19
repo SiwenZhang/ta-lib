@@ -66,6 +66,7 @@ extern const TA_FuncDef TA_DEF_AVGDEV;
 extern const TA_FuncDef TA_DEF_BBANDS;
 extern const TA_FuncDef TA_DEF_BETA;
 extern const TA_FuncDef TA_DEF_BOP;
+extern const TA_FuncDef TA_DEF_BRVR;
 extern const TA_FuncDef TA_DEF_CCI;
 extern const TA_FuncDef TA_DEF_CDL2CROWS;
 extern const TA_FuncDef TA_DEF_CDL2LYA;
@@ -327,6 +328,7 @@ NULL };
 const TA_FuncDef *TA_PerGroupFunc_6[] = {
 &TA_DEF_AD,
 &TA_DEF_ADOSC,
+&TA_DEF_BRVR,
 &TA_DEF_OBV,
 &TA_DEF_VWAP,
 &TA_DEF_VWAPFUTU,

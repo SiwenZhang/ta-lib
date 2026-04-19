@@ -666,6 +666,45 @@ TA_LIB_API int TA_BOP_Lookback( void );
 
 
 /*
+ * TA_BRVR - Body Ratio and Volume Ratio
+ * 
+ * Input  = Open, High, Low, Close, Volume
+ * Output = double, double
+ * 
+ * Body ratio is compared to average body length of 10 previous candles.
+ * Positive for bullish candle, negative for bearish candle.
+ * Volume ratio is compared to average volume of 20 previous candles.
+ * Always positive.
+ * 
+ */
+TA_LIB_API TA_RetCode TA_BRVR( int    startIdx,
+                               int    endIdx,
+                                          const double inOpen[],
+                                          const double inHigh[],
+                                          const double inLow[],
+                                          const double inClose[],
+                                          const double inVolume[],
+                                          int          *outBegIdx,
+                                          int          *outNBElement,
+                                          double        outBodyRatio[],
+                                          double        outVolumeRatio[] );
+
+TA_LIB_API TA_RetCode TA_S_BRVR( int    startIdx,
+                                 int    endIdx,
+                                            const float  inOpen[],
+                                            const float  inHigh[],
+                                            const float  inLow[],
+                                            const float  inClose[],
+                                            const float  inVolume[],
+                                            int          *outBegIdx,
+                                            int          *outNBElement,
+                                            double        outBodyRatio[],
+                                            double        outVolumeRatio[] );
+
+TA_LIB_API int TA_BRVR_Lookback( void );
+
+
+/*
  * TA_CCI - Commodity Channel Index
  * 
  * Input  = High, Low, Close

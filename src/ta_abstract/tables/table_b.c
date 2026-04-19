@@ -143,6 +143,36 @@ DEF_FUNCTION( BOP,                   /* name */
              );
 /* BOP END */
 
+/* BRVR BEGIN */
+const TA_OutputParameterInfo TA_DEF_UI_Output_Real_BodyRatio =
+                               { TA_Output_Real, "outBodyRatio", TA_OUT_LINE };
+
+const TA_OutputParameterInfo TA_DEF_UI_Output_Real_VolumeRatio =
+                               { TA_Output_Real, "outVolumeRatio", TA_OUT_DASH_LINE };
+
+static const TA_InputParameterInfo    *TA_BRVR_Inputs[]    =
+{
+  &TA_DEF_UI_Input_Price_OHLCV,
+  NULL
+};
+
+static const TA_OutputParameterInfo   *TA_BRVR_Outputs[]   =
+{
+  &TA_DEF_UI_Output_Real_BodyRatio,
+  &TA_DEF_UI_Output_Real_VolumeRatio,
+  NULL
+};
+
+static const TA_OptInputParameterInfo *TA_BRVR_OptInputs[] = { NULL };
+
+DEF_FUNCTION( BRVR,                         /* name */
+              TA_GroupId_VolumeIndicators,  /* groupId */
+              "Body Ratio and Volume Ratio", /* hint */
+              "Brvr",                       /* CamelCase name */
+              0                             /* flags */
+             );
+/* BRVR END */
+
 /* BETA BEGIN */
 static const TA_InputParameterInfo    *TA_BETA_Inputs[]    =
 {
@@ -180,6 +210,7 @@ const TA_FuncDef *TA_DEF_TableB[] =
    ADD_TO_TABLE(BBANDS),
    ADD_TO_TABLE(BETA),
    ADD_TO_TABLE(BOP),
+   ADD_TO_TABLE(BRVR),
    NULL
 };
 
