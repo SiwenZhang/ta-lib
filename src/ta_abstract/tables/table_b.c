@@ -173,6 +173,36 @@ DEF_FUNCTION( BRVR,                         /* name */
              );
 /* BRVR END */
 
+/* BLBR BEGIN */
+const TA_OutputParameterInfo TA_DEF_UI_Output_Real_UpperEMA =
+                               { TA_Output_Real, "outRealUpperEMA", TA_OUT_UPPER_LIMIT };
+
+const TA_OutputParameterInfo TA_DEF_UI_Output_Real_LowerEMA =
+                               { TA_Output_Real, "outRealLowerEMA", TA_OUT_LOWER_LIMIT };
+
+static const TA_InputParameterInfo    *TA_BLBR_Inputs[]    =
+{
+  &TA_DEF_UI_Input_Price_HL,
+  NULL
+};
+
+static const TA_OutputParameterInfo   *TA_BLBR_Outputs[]   =
+{
+  &TA_DEF_UI_Output_Real_UpperEMA,
+  &TA_DEF_UI_Output_Real_LowerEMA,
+  NULL
+};
+
+static const TA_OptInputParameterInfo *TA_BLBR_OptInputs[] = { NULL };
+
+DEF_FUNCTION( BLBR,                         /* name */
+              TA_GroupId_OverlapStudies,    /* groupId */
+              "Bull Bear Bands",            /* hint */
+              "Blbr",                       /* CamelCase name */
+              TA_FUNC_FLG_OVERLAP           /* flags */
+             );
+/* BLBR END */
+
 /* BETA BEGIN */
 static const TA_InputParameterInfo    *TA_BETA_Inputs[]    =
 {
@@ -209,6 +239,7 @@ const TA_FuncDef *TA_DEF_TableB[] =
 {
    ADD_TO_TABLE(BBANDS),
    ADD_TO_TABLE(BETA),
+   ADD_TO_TABLE(BLBR),
    ADD_TO_TABLE(BOP),
    ADD_TO_TABLE(BRVR),
    NULL

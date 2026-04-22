@@ -439,6 +439,27 @@
 /* Generated */    (void)params;
 /* Generated */    return TA_BOP_Lookback( );
 /* Generated */ }
+/* Generated */ TA_RetCode TA_BLBR_FramePP( const TA_ParamHolderPriv *params,
+/* Generated */                           int            startIdx,
+/* Generated */                           int            endIdx,
+/* Generated */                           int           *outBegIdx,
+/* Generated */                           int           *outNBElement )
+/* Generated */ {
+/* Generated */    return TA_BLBR(
+/* Generated */               startIdx,
+/* Generated */               endIdx,
+/* Generated */               params->in[0].data.inPrice.high,
+/* Generated */               params->in[0].data.inPrice.low,
+/* Generated */               outBegIdx, 
+/* Generated */               outNBElement, 
+/* Generated */               params->out[0].data.outReal,
+/* Generated */               params->out[1].data.outReal );
+/* Generated */ }
+/* Generated */ unsigned int TA_BLBR_FramePPLB( const TA_ParamHolderPriv *params )
+/* Generated */ {
+/* Generated */    (void)params;
+/* Generated */    return TA_BLBR_Lookback( );
+/* Generated */ }
 /* Generated */ TA_RetCode TA_BRVR_FramePP( const TA_ParamHolderPriv *params,
 /* Generated */                           int            startIdx,
 /* Generated */                           int            endIdx,

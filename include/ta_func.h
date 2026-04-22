@@ -705,6 +705,34 @@ TA_LIB_API int TA_BRVR_Lookback( void );
 
 
 /*
+ * TA_BLBR - Bull Bear Bands (24-period EMA of High, 23-period EMA of Low)
+ * 
+ * Input  = High, Low
+ * Output = double, double
+ * 
+ */
+TA_LIB_API TA_RetCode TA_BLBR( int    startIdx,
+                               int    endIdx,
+                                          const double inHigh[],
+                                          const double inLow[],
+                                          int          *outBegIdx,
+                                          int          *outNBElement,
+                                          double        outRealUpperEMA[],
+                                          double        outRealLowerEMA[] );
+
+TA_LIB_API TA_RetCode TA_S_BLBR( int    startIdx,
+                                 int    endIdx,
+                                            const float  inHigh[],
+                                            const float  inLow[],
+                                            int          *outBegIdx,
+                                            int          *outNBElement,
+                                            double        outRealUpperEMA[],
+                                            double        outRealLowerEMA[] );
+
+TA_LIB_API int TA_BLBR_Lookback( void );
+
+
+/*
  * TA_CCI - Commodity Channel Index
  * 
  * Input  = High, Low, Close

@@ -65,6 +65,7 @@ extern const TA_FuncDef TA_DEF_AVGPRICE;
 extern const TA_FuncDef TA_DEF_AVGDEV;
 extern const TA_FuncDef TA_DEF_BBANDS;
 extern const TA_FuncDef TA_DEF_BETA;
+extern const TA_FuncDef TA_DEF_BLBR;
 extern const TA_FuncDef TA_DEF_BOP;
 extern const TA_FuncDef TA_DEF_BRVR;
 extern const TA_FuncDef TA_DEF_CCI;
@@ -255,6 +256,7 @@ NULL };
 const TA_FuncDef *TA_PerGroupFunc_2[] = {
 &TA_DEF_ACCBANDS,
 &TA_DEF_BBANDS,
+&TA_DEF_BLBR,
 &TA_DEF_DEMA,
 &TA_DEF_EMA,
 &TA_DEF_HT_TRENDLINE,

@@ -524,6 +524,9 @@
     <ClCompile Include="..\..\..\..\src\ta_func\ta_BRVR.c">
       <Filter>src\ta_func</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\src\ta_func\ta_BLBR.c">
+      <Filter>src\ta_func</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\include\ta_common.h">
